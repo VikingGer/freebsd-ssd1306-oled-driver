@@ -7,6 +7,7 @@ The main parts of the code were written with ChatGPT (support was provided by th
 Ref:
   1. https://github.com/610t/FreeBSD_I2C
   2. https://github.com/NateLol/luci-app-oled
+  3. https://github.com/geerlingguy/raspberry-pi-pcie-devices/issues/337
 
 Feel free to optimize the code.
 
