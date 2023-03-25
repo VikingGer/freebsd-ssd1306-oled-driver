@@ -9,3 +9,13 @@ https://github.com/610t/FreeBSD_I2C
 https://github.com/NateLol/luci-app-oled
 
 Therefore, feel free to optimize the code.
+
+Compile the src like: clang -o ssd1306 ssd1306.c
+Copy the resulting binary to /usr/local/bin/
+chmod +x /usr/local/bin/ssd1306
+The driver should be started as daemon. 
+Therefore copy "ssd1306_oled" into /usr/local/etc/rc.d/
+chmod +x /usr/local/etc/rc.d/ssd1306_oled
+echo 'ssd1306_oled_enable="YES"' > /etc/rc.conf.d/ssd1306_oled
+service ssd1306_oled start
+service ssd1306_oled stop
