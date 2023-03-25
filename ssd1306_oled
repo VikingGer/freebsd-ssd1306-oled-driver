@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# PROVIDE: ssd1306_oled
+# REQUIRE: DAEMON
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name="ssd1306_oled"
+rcvar="ssd1306_oled_enable"
+
+start_cmd="${name}_start"
+stop_cmd="${name}_stop"
+
+ssd1306_oled_start() {
+    /usr/local/bin/ssd1306 &
+}
+
+ssd1306_oled_stop() {
+    pkill -f ssd1306
+}
+
+load_rc_config $name
+run_rc_command "$1"
+
