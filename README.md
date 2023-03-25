@@ -11,7 +11,7 @@ Ref:
 
 Feel free to optimize the code.
 
-How to setup the display:
+## How to setup the display:
 - Compile the src like: clang -o ssd1306 ssd1306.c
 - Copy the resulting binary to /usr/local/bin/
 - chmod +x /usr/local/bin/ssd1306
@@ -20,6 +20,13 @@ How to setup the display:
 - chmod +x /usr/local/etc/rc.d/ssd1306_oled
 - echo 'ssd1306_oled_enable="YES"' > /etc/rc.conf.d/ssd1306_oled
 
-Interact:
+## Interact:
 - service ssd1306_oled start
 - service ssd1306_oled stop
+
+## Raspi config.txt:
+dtparam=i2c_arm=on
+
+gpio=2,3=a0
+
+https://forums.freebsd.org/threads/rpi4-i2c-devices.77825/#post-510324
